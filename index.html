@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Евгений Полюга — Мастер Интеллект-Тренер | Моя команда Super Jump</title>
+    <meta name="description" content="Евгений Полюга — мастер интеллект-тренер, основатель команды Super Jump. Энергия, уверенность, баланс и рост на 10-дневных интенсивах.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#f3e5ab',
+                            DEFAULT: '#d4af37',
+                            dark: '#b8860b',
+                        },
+                        dark: '#111111',
+                        cream: '#fdfbf7',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            background-color: #fdfbf7; 
+            color: #111111; 
+            overflow-x: hidden; 
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        img { 
+            -webkit-user-drag: none; 
+            -khtml-user-drag: none; 
+            -moz-user-drag: none; 
+            -o-user-drag: none; 
+        }
+        
+        .btn-gold { 
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%); 
+            color: #ffffff; 
+            box-shadow: 0 10px 20px rgba(212,175,55,0.2); 
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 12px;
+        }
+        .btn-gold:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 25px rgba(212,175,55,0.4); 
+            color: #ffffff;
+        }
+        
+        .btn-outline-gold { 
+            border: 2px solid #d4af37; 
+            color: #111111; 
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+        .btn-outline-gold:hover { 
+            background-color: #d4af37; 
+            color: #ffffff; 
+            box-shadow: 0 10px 20px rgba(212,175,55,0.2);
+            transform: translateY(-3px);
+        }
+
+        .section-padding { padding: 6rem 0; }
+        
+        .hero-image-wrap { 
+            position: relative; 
+            display: inline-block; 
+            width: 100%; 
+            max-width: 450px; 
+            padding: 12px;
+            border: 2px solid #d4af37;
+            border-radius: 28px;
+        }
+        .hero-image-wrap img {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            filter: grayscale(15%) contrast(110%);
+        }
+        
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid rgba(212,175,55,0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 16px;
+        }
+        .premium-card:hover {
+            border-color: #d4af37;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            transform: translateY(-5px);
+        }
+        
+        .custom-checkbox {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border: 2px solid rgba(212,175,55,0.5);
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+        .custom-checkbox:checked {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            border-color: #d4af37;
+        }
+        .custom-checkbox:checked::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: white;
+            font-size: 12px;
+        }
+
+        .pearl-pane { display: none; animation: fadeUp 0.5s ease forwards; }
+        .pearl-pane.active { display: block; }
+        
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-scrolled {
+            background: rgba(253, 251, 247, 0.95) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(212,175,55,0.3) !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-lg border-b border-gold/10 transition-all duration-300 h-20 flex items-center" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+            <a href="#" class="font-serif text-xl md:text-2xl font-bold tracking-widest uppercase text-dark flex items-center gap-3">
+                <i class="fa-solid fa-chess-knight text-gold"></i>
+                <span>Евгений Полюга</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-xs font-bold tracking-widest uppercase text-gray-800">
+                <a href="#about" class="hover:text-gold transition">Обо мне</a>
+                <a href="#method" class="hover:text-gold transition">Методика</a>
+                <a href="#formats" class="hover:text-gold transition">Форматы</a>
+                <a href="#contacts" class="btn-gold px-6 py-3">Связаться</a>
+            </div>
+            <button class="md:hidden text-dark text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center gap-8 text-white text-xl font-serif uppercase tracking-widest pt-20">
+        <button class="absolute top-6 right-6 text-3xl text-gold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#about" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-gold">Обо мне</a>
+        <a href="#method" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-gold">Методика</a>
+        <a href="#formats" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-gold">Форматы</a>
+        <a href="#contacts" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="text-gold">Контакты</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden bg-cream" id="hero">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-3 border border-gold/40 px-5 py-2 mb-8 bg-white/50 backdrop-blur-sm shadow-sm">
+                    <i class="fa-solid fa-bolt text-gold"></i>
+                    <span class="text-dark uppercase tracking-widest text-xs font-bold">Моя команда Super Jump</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-dark font-serif">
+                    Масштаб <br>
+                    <span class="text-gold italic font-normal">вашей личности</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg font-light">
+                    Я — Евгений Полюга, мастер интеллект-тренер. Помогаю предпринимателям и лидерам кратно расти в доходе, энергии и уверенности через 10-дневные интенсивы.
+                </p>
+                
+                <div class="flex flex-wrap gap-5">
+                    <a href="#msg-generator" class="btn-gold px-8 py-4 uppercase font-bold tracking-wider text-sm flex items-center gap-3">
+                        <i class="fa-solid fa-rocket"></i> Начать трансформацию
+                    </a>
+                    <a href="#about" class="btn-outline-gold px-8 py-4 uppercase font-bold tracking-wider text-sm">
+                        Узнать больше
+                    </a>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-3 gap-6 border-t border-gold/20 pt-8">
+                    <div>
+                        <div class="text-4xl font-serif text-dark mb-1">10</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Дней курса</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-serif text-dark mb-1">8</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Жемчужин</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-serif text-dark mb-1">100%</div>
+                        <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Гарантия</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center md:justify-end">
+                <div class="hero-image-wrap">
+                    <img src="1.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" 
+                         alt="Евгений Полюга">
+                    
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-xl rounded-xl z-20 border border-gold/20 flex items-center gap-4 hidden md:flex animate-[bounce_3s_infinite]">
+                        <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xl border border-gold/30">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark text-sm uppercase tracking-wider">Квантовый скачок</div>
+                            <div class="text-gray-500 text-xs">в доходе и энергии</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="py-10 bg-dark flex justify-center">
+        <i class="fa-solid fa-chess-knight text-gold text-3xl opacity-80"></i>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section-padding bg-white relative" id="about">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 relative w-full max-w-md mx-auto md:max-w-full p-3 border-2 border-gold rounded-[28px]">
+                <img src="1.jpg" alt="Евгений Полюга" class="relative z-10 w-full aspect-square object-cover grayscale-[15%] contrast-110 rounded-2xl shadow-lg">
+            </div>
+            
+            <div class="order-1 md:order-2">
+                <span class="text-gold uppercase tracking-widest text-xs font-bold block mb-4">Основатель команды</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-dark mb-8 leading-tight">Ваш проводник <br>к неисчерпаемому ресурсу</h2>
+                
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed font-light">
+                    Большинство сильных людей рано или поздно упираются в невидимый потолок. Проблема кроется не в отсутствии знаний или связей, а в <strong>нехватке внутренней энергии</strong> и расфокусировке.
+                </p>
+                <p class="text-gray-600 text-lg mb-10 leading-relaxed font-light">
+                    Моя цель как интеллект-тренера — передать вам фундаментальные инструменты, которые навсегда избавят от выгорания, вернут стальную уверенность и позволят масштабировать успех без надрыва.
+                </p>
+                
+                <ul class="space-y-5 mb-12">
+                    <li class="flex items-start gap-5">
+                        <div class="mt-1 w-6 h-6 bg-gold flex items-center justify-center text-white text-xs shrink-0 rounded-sm">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium">Моментальное восстановление физического и эмоционального ресурса</span>
+                    </li>
+                    <li class="flex items-start gap-5">
+                        <div class="mt-1 w-6 h-6 bg-gold flex items-center justify-center text-white text-xs shrink-0 rounded-sm">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium">Развитие харизмы, лидерства и ораторского мастерства</span>
+                    </li>
+                    <li class="flex items-start gap-5">
+                        <div class="mt-1 w-6 h-6 bg-gold flex items-center justify-center text-white text-xs shrink-0 rounded-sm">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium">Формирование сильного окружения и масштабирование доходов</span>
+                    </li>
+                </ul>
+                
+                <a href="#formats" class="text-gold font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:text-dark transition">
+                    Выбрать формат работы <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEST SECTION -->
+    <section class="section-padding bg-cream border-y border-gold/10" id="test">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-widest text-xs font-bold block mb-4">Диагностика состояния</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-dark mb-6">Требуется ли вам перезагрузка?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto font-light text-lg">Отметьте утверждения, которые резонируют с вашим текущим состоянием, чтобы получить честную оценку.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-5 mb-12" id="testGrid">
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Чувствую постоянную нехватку энергии и усталость с самого утра.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Часто испытываю фоновый стресс, тревогу и раздражение.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Достиг финансового потолка и не вижу ясных путей для масштабирования.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Ощущаю потерю глобальных смыслов и выгорание в текущем бизнесе.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Сложно строить гармоничные и доверительные отношения.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Не хватает решительности и уверенности для смелых шагов.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Текущее окружение тянет вниз и не поддерживает амбициозные цели.</span>
+                </label>
+                <label class="premium-card p-6 flex items-start gap-5 cursor-pointer">
+                    <input type="checkbox" class="custom-checkbox mt-0.5" onchange="updateTest()">
+                    <span class="text-gray-700 font-medium leading-relaxed">Наблюдаются проблемы с самодисциплиной и фокусом на главном.</span>
+                </label>
+            </div>
+            
+            <div class="text-center mb-8">
+                <button onclick="calculateTest()" class="btn-gold px-12 py-5 uppercase font-bold tracking-widest text-sm">
+                    Получить результат диагностики
+                </button>
+            </div>
+            
+            <div id="testResult" class="hidden bg-dark text-white p-12 text-center border-t-4 border-gold relative overflow-hidden shadow-2xl rounded-2xl">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                <div class="relative z-10">
+                    <div id="resultBadge" class="inline-block px-5 py-1.5 bg-gold text-dark uppercase tracking-widest text-[10px] font-bold mb-6"></div>
+                    <h3 id="resultTitle" class="text-3xl md:text-4xl font-serif mb-6 text-white"></h3>
+                    <p id="resultText" class="text-gray-300 max-w-2xl mx-auto mb-10 text-lg font-light leading-relaxed"></p>
+                    <a href="#msg-generator" class="btn-gold px-10 py-4 uppercase text-xs font-bold tracking-widest inline-block">Записаться на разбор к Евгению</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 PEARLS -->
+    <section class="section-padding bg-white" id="method">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold uppercase tracking-widest text-xs font-bold block mb-4">Инструментарий лидера</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-dark mb-6">8 Жемчужин Super Jump</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto font-light text-lg">Прагматичная система интеллектуальных тренировок, меняющая мышление и физиологию всего за 10 дней.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+                <div class="pearl-tab active rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(1)">1. Улыбки</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(2)">2. Мысли</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(3)">3. Осанка</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(4)">4. Здоровье</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(5)">5. Чувства</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(6)">6. Аудио</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(7)">7. Защита</div>
+                <div class="pearl-tab rounded-xl p-4 text-center cursor-pointer border border-gray-200 bg-white uppercase text-xs font-bold tracking-wider hover:border-gold transition" onclick="switchPearl(8)">8. Сверхцель</div>
+            </div>
+            
+            <div class="bg-cream border border-gold/20 p-10 md:p-16 min-h-[350px] flex items-center relative overflow-hidden shadow-lg rounded-2xl">
+                <i class="fa-solid fa-gem absolute -bottom-10 -right-10 text-[250px] text-dark opacity-[0.03]"></i>
+                
+                <!-- Pearl Contents -->
+                <div id="pearl-1" class="pearl-pane active relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">01</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">200 улыбок</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Необходимо улыбаться не менее 200 раз в день. По утверждению тренеров, это ускоряет выработку гормонов счастья, повышает работоспособность и креативность, снимает усталость. Для напоминания можно нарисовать смайлик на левой руке.</p>
+                </div>
+                <div id="pearl-2" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">02</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Я — хозяин своих мыслей</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Упражнение направлено на снижение потока негативных мыслей и изменение ментального состояния на более позитивное. В некоторых версиях методики предлагается использовать резинку на запястье: при появлении негативной мысли нужно оттянуть резинку и хлопнуть себя по руке, чтобы мозг «запомнил» болевую реакцию и старался избегать негативных мыслей.</p>
+                </div>
+                <div id="pearl-3" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">03</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Осанка короля и королевы</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Цель — повысить уверенность в себе как с точки зрения внутреннего восприятия, так и в глазах окружающих. Упражнение может включать работу с осанкой и манерой поведения.</p>
+                </div>
+                <div id="pearl-4" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">04</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Будьте здоровы</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Стимулирует появление новых, нестандартных идей и креативных решений. В некоторых версиях курса предлагается обливаться холодной водой.</p>
+                </div>
+                <div id="pearl-5" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">05</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Я — хозяин своих чувств</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Даёт возможность управлять эмоциональными реакциями, повышает стрессоустойчивость, помогает стать более спокойным и открытым к сотрудничеству.</p>
+                </div>
+                <div id="pearl-6" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">06</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Аудиотренинг</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Позволяет работать с подсознанием, способствует достижению целей.</p>
+                </div>
+                <div id="pearl-7" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">07</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Защита от информационного яда</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Освобождает мозг от ненужной информации, улучшает внимание и память.</p>
+                </div>
+                <div id="pearl-8" class="pearl-pane relative z-10 w-full max-w-4xl mx-auto">
+                    <div class="text-7xl text-gold mb-6 opacity-40 font-serif leading-none">08</div>
+                    <h3 class="text-3xl font-serif mb-6 text-dark">Сверхцель</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed font-light">Помогает стать осознаннее, энергичнее, поменять окружение, проявить таланты и реализовать потенциал.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMATS -->
+    <section class="section-padding bg-dark text-white relative" id="formats">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <span class="text-gold uppercase tracking-widest text-xs font-bold block mb-4">Инвестиции в себя</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Форматы работы</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg">Выберите подходящий формат для достижения ваших стратегических целей.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Group -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-10 flex flex-col h-full hover:border-gold/50 transition duration-300">
+                    <div class="text-gold text-4xl mb-6"><i class="fa-solid fa-users"></i></div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Групповой интенсив</h3>
+                    <div class="text-gray-400 mb-8 text-sm uppercase tracking-wider font-bold">10 дней онлайн</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Небольшая группа до 10 человек</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Освоение 8 базовых упражнений</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Синергия и поддержка окружения</li>
+                    </ul>
+                    <a href="#msg-generator" class="btn-outline-gold !border-white/20 !text-white hover:!border-gold hover:!bg-gold w-full py-4 text-center uppercase text-xs font-bold tracking-widest block">Записаться</a>
+                </div>
+                
+                <!-- VIP -->
+                <div class="bg-white border-2 border-gold rounded-2xl p-10 flex flex-col h-full relative transform md:-translate-y-4 shadow-[0_20px_50px_rgba(212,175,55,0.15)] text-dark">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-white font-bold rounded-full uppercase tracking-widest text-[10px] py-1.5 px-6">
+                        Premium
+                    </div>
+                    <div class="text-gold text-4xl mb-6"><i class="fa-solid fa-crown"></i></div>
+                    <h3 class="text-2xl font-serif text-dark mb-4">Личное наставничество</h3>
+                    <div class="text-gray-500 mb-8 text-sm uppercase tracking-wider font-bold">Индивидуально со мной</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-700 font-medium">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Работа 1 на 1 по гибкому графику</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Жесткий разбор ваших блоков</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Фокус на масштабирование бизнеса</li>
+                    </ul>
+                    <a href="#msg-generator" class="btn-gold w-full py-4 text-center uppercase text-xs font-bold tracking-widest block">Забронировать место</a>
+                </div>
+                
+                <!-- Business -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-10 flex flex-col h-full hover:border-gold/50 transition duration-300">
+                    <div class="text-gold text-4xl mb-6"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Бизнес партнерство</h3>
+                    <div class="text-gray-400 mb-8 text-sm uppercase tracking-wider font-bold">Обучение + Франшиза</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Профессия Интеллект-тренера</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Вход в мою команду лидеров</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-angle-right text-gold mt-1"></i> Международный бизнес онлайн</li>
+                    </ul>
+                    <a href="#msg-generator" class="btn-outline-gold !border-white/20 !text-white hover:!border-gold hover:!bg-gold w-full py-4 text-center uppercase text-xs font-bold tracking-widest block">Узнать детали</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE GENERATOR -->
+    <section class="section-padding bg-cream relative" id="msg-generator">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-white border border-gold/20 shadow-2xl overflow-hidden flex flex-col md:flex-row rounded-3xl">
+                <!-- Info -->
+                <div class="bg-dark text-white p-12 md:w-5/12 relative">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+                    <div class="relative z-10">
+                        <span class="text-gold uppercase tracking-widest text-xs font-bold block mb-4">Быстрый старт</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight">Запишитесь на личный разбор</h2>
+                        <p class="text-gray-400 mb-10 font-light leading-relaxed">
+                            Выберите ваш главный фокус, введите имя, и система сгенерирует готовое сообщение для отправки мне напрямую в Telegram. Мы свяжемся и обсудим ваш запрос.
+                        </p>
+                        <div class="border-t border-white/10 pt-8 mt-auto">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gold/10 flex items-center justify-center text-gold text-xl border border-gold/30">
+                                    <i class="fa-solid fa-chess-knight"></i>
+                                </div>
+                                <div>
+                                    <div class="font-serif text-xl">Евгений Полюга</div>
+                                    <div class="text-gold text-[10px] uppercase tracking-widest mt-1">Ваш интеллект-тренер</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form -->
+                <div class="p-12 md:w-7/12 bg-white">
+                    <div class="mb-8">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Ваше имя</label>
+                        <input type="text" id="userName" class="w-full border-b-2 border-gray-200 focus:border-gold py-3 outline-none transition bg-transparent text-xl font-serif text-dark placeholder:text-gray-300" placeholder="Например: Александр">
+                    </div>
+                    
+                    <div class="mb-10">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Главный приоритет</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="goal-option selected rounded-xl border border-gold bg-gold/5 text-dark p-4 text-center cursor-pointer text-xs font-bold uppercase tracking-wider transition" onclick="selectGoal(this, 'Поднять энергию и тонус')">⚡ Энергия</div>
+                            <div class="goal-option rounded-xl border border-gray-200 text-gray-500 p-4 text-center cursor-pointer text-xs font-bold uppercase tracking-wider transition hover:border-gold hover:text-dark" onclick="selectGoal(this, 'Масштабировать бизнес')">🎯 Масштаб</div>
+                            <div class="goal-option rounded-xl border border-gray-200 text-gray-500 p-4 text-center cursor-pointer text-xs font-bold uppercase tracking-wider transition hover:border-gold hover:text-dark" onclick="selectGoal(this, 'Вырасти финансово')">💰 Доход</div>
+                            <div class="goal-option rounded-xl border border-gray-200 text-gray-500 p-4 text-center cursor-pointer text-xs font-bold uppercase tracking-wider transition hover:border-gold hover:text-dark" onclick="selectGoal(this, 'Улучшить отношения')">🤝 Отношения</div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="generateCustomMessage()" class="btn-gold w-full py-5 uppercase font-bold tracking-widest text-sm flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-telegram text-xl"></i> Отправить заявку в Telegram
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACTS -->
+    <footer class="bg-dark text-white pt-24 pb-12 border-t border-white/5" id="contacts">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 mb-20 border-b border-white/10 pb-20">
+                <div class="md:col-span-5">
+                    <a href="#" class="font-serif text-2xl font-bold tracking-widest uppercase text-white flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-chess-knight text-gold"></i>
+                        <span>Евгений Полюга</span>
+                    </a>
+                    <p class="text-gray-200 mb-8 font-light leading-relaxed max-w-sm">
+                        Мастер интеллект-тренер. Помогу раскрыть ваш потенциал, вернуть энергию и выйти на принципиально новый уровень жизни и бизнеса.
+                    </p>
+                    <div class="inline-block border border-gold/30 px-4 py-1.5 text-gold text-xs font-bold uppercase tracking-widest">
+                        Моя команда Super Jump
+                    </div>
+                </div>
+                
+                <div class="md:col-span-3 md:col-start-7">
+                    <h4 class="text-sm font-bold mb-8 uppercase tracking-widest text-gray-300">Прямая связь</h4>
+                    <ul class="space-y-5">
+                        <li>
+                            <a href="https://t.me/vostap_max" target="_blank" class="flex items-center gap-4 text-gray-100 hover:text-gold transition font-light group">
+                                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </div>
+                                @vostap_max
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/79990000000" target="_blank" class="flex items-center gap-4 text-gray-100 hover:text-gold transition font-light group">
+                                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vk.com/vostap_max" target="_blank" class="flex items-center gap-4 text-gray-100 hover:text-gold transition font-light group">
+                                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition">
+                                    <i class="fa-brands fa-vk"></i>
+                                </div>
+                                ВКонтакте
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <h4 class="text-sm font-bold mb-8 uppercase tracking-widest text-gray-300">Навигация</h4>
+                    <ul class="space-y-4 font-light text-gray-100">
+                        <li><a href="#about" class="hover:text-gold transition">Обо мне</a></li>
+                        <li><a href="#method" class="hover:text-gold transition">Методика (8 Жемчужин)</a></li>
+                        <li><a href="#test" class="hover:text-gold transition">Диагностика состояния</a></li>
+                        <li><a href="#formats" class="hover:text-gold transition">Форматы участия</a></li>
+                        <li class="pt-4 mt-4 border-t border-white/10">
+                            <a href="https://account.superjump.com/register/118814" target="_blank" class="text-gold font-bold hover:text-white transition flex items-center gap-2 uppercase tracking-widest text-[10px]">
+                                <i class="fa-solid fa-link"></i> Регистрация в кабинете
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-600 text-xs tracking-widest uppercase">
+                <div>&copy; 2026 Евгений Полюга. Все права защищены.</div>
+                <div class="mt-4 md:mt-0">Premium Business Landing</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ЗАЩИТА ОТ КОПИРОВАНИЯ И ПРОСМОТРА КОДА
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        
+        document.addEventListener('keydown', e => {
+            if (
+                e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) ||
+                (e.ctrlKey && ['U', 'u', 'S', 's', 'C', 'c', 'P', 'p'].includes(e.key)) ||
+                (e.metaKey && e.altKey && ['I', 'i', 'J', 'j', 'U', 'u'].includes(e.key))
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('selectstart', e => {
+            if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('dragstart', e => e.preventDefault());
+
+        // Navbar Scrolled Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Test Logic
+        function updateTest() {}
+
+        function calculateTest() {
+            const checked = document.querySelectorAll('.custom-checkbox:checked').length;
+            const resultBox = document.getElementById('testResult');
+            const badge = document.getElementById('resultBadge');
+            const title = document.getElementById('resultTitle');
+            const text = document.getElementById('resultText');
+            
+            if (checked === 0) {
+                badge.innerText = 'Эталонный уровень';
+                title.innerText = 'Вы в отличной форме!';
+                text.innerText = 'Ваш уровень энергии и фокуса на высоте. Инструменты Super Jump помогут вам масштабировать этот успех, стать лидером мнений и открыть новые горизонты в бизнесе, обучая других.';
+            } else if (checked <= 3) {
+                badge.innerText = 'Легкий спад';
+                title.innerText = 'Время восполнить ресурс';
+                text.innerText = 'У вас наблюдаются первые признаки усталости и потери фокуса. Базовые практики методики помогут вам быстро вернуть ясность ума, уверенность и продуктивность без отрыва от дел.';
+            } else if (checked <= 6) {
+                badge.innerText = 'Выгорание';
+                title.innerText = 'Необходима перезагрузка';
+                text.innerText = 'Вы отдаете бизнесу и делам больше энергии, чем получаете. Наш 10-дневный интенсив гарантированно вернет вам ресурсное состояние, устранит фоновый стресс и вернет радость побед.';
+            } else {
+                badge.innerText = 'Критический уровень';
+                title.innerText = 'Экстренное восстановление';
+                text.innerText = 'Ваш организм и психика истощены. Вам жизненно необходим интенсивный курс под личным наставничеством для жесткого выхода из кризиса и возвращения контроля над своей жизнью и бизнесом.';
+            }
+            
+            resultBox.classList.remove('hidden');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // 8 Pearls Switcher
+        function switchPearl(index) {
+            document.querySelectorAll('.pearl-tab').forEach((tab, i) => {
+                if (i === index - 1) {
+                    tab.classList.add('active', 'bg-dark', 'text-gold', 'border-dark');
+                    tab.classList.remove('text-dark', 'bg-white', 'border-gray-200');
+                } else {
+                    tab.classList.remove('active', 'bg-dark', 'text-gold', 'border-dark');
+                    tab.classList.add('text-dark', 'bg-white', 'border-gray-200');
+                }
+            });
+            document.querySelectorAll('.pearl-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            document.getElementById(`pearl-${index}`).classList.add('active');
+        }
+
+        // Message Generator
+        let selectedGoalText = 'Поднять энергию и тонус';
+
+        function selectGoal(element, goal) {
+            document.querySelectorAll('.goal-option').forEach(el => {
+                el.classList.remove('border-gold', 'bg-gold/5', 'text-dark', 'selected');
+                el.classList.add('border-gray-200', 'text-gray-500');
+            });
+            element.classList.remove('border-gray-200', 'text-gray-500');
+            element.classList.add('border-gold', 'bg-gold/5', 'text-dark', 'selected');
+            selectedGoalText = goal;
+        }
+
+        function generateCustomMessage() {
+            const name = document.getElementById('userName').value.trim() || 'Гость';
+            const text = `Здравствуйте, Евгений! Меня зовут ${name}. Мой главный приоритет: ${selectedGoalText}. Хочу узнать подробности о формате работы и ближайшем интенсиве.`;
+            const encoded = encodeURIComponent(text);
+            window.open(`https://t.me/vostap_max?text=${encoded}`, '_blank');
+        }
+        
+        switchPearl(1);
+    </script>
+</body>
+</html>
